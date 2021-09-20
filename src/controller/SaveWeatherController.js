@@ -1,4 +1,4 @@
-import { getWeather } from "./helper/axios";
+
 import Weather from "../model/Weather";
 import { uuid } from "uuidv4";
 class SaveWeatherController {
