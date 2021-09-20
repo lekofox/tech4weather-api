@@ -5,19 +5,12 @@ class SaveWeatherController {
   async fetchWeatherApi(req, res) {
     try {
       const id = uuid();
-      const { city } = req.body;
-
-      const fetch = await getWeather(city);
-
-      const responseBody = {
-        city: fetch.data.name,
-        country: fetch.data.sys.country,
-      };
+      const { city, country } = req.body;
 
       const create = await Weather.create({
         id,
-        city: responseBody.city,
-        country: responseBody.country,
+        city,
+        country,
         created_at: new Date(),
       });
 
