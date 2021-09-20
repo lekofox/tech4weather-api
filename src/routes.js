@@ -6,7 +6,7 @@ const routes = new Router();
 
 routes.get("/", (req, res) =>
   res.status(200).json({
-    message: "corinthians",
+    message: "Obrigado por acessar!",
   })
 );
 
